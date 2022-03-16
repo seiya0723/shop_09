@@ -1,0 +1,11 @@
+{% for topic in topics %}
+<div class="border">
+{{ topic.comment }}
+
+<form action="{% url 'bbs:single' topic.id %}">
+    <input class="btn btn-outline-danger trash" type="button" value="削除">
+</form>
+
+</div>
+{% endfor %}
+
